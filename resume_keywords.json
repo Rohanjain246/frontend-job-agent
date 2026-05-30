@@ -1,25 +1,39 @@
 {
-"primary": [
-"react",
-"typescript",
-"javascript",
-"frontend",
-"frontend engineer",
-"frontend developer",
-"ui engineer",
-"next.js"
-],
-"secondary": [
-"html",
-"css",
-"tailwind",
-"redux",
-"storybook",
-"jest",
-"cypress",
-"accessibility",
-"design system",
-"performance",
-"web"
-]
+  "primary": [
+    "react",
+    "typescript",
+    "javascript",
+    "frontend",
+    "frontend engineer",
+    "frontend developer",
+    "ui engineer",
+    "next.js",
+    "react developer",
+    "react engineer"
+  ],
+  "secondary": [
+    "html",
+    "css",
+    "tailwind",
+    "redux",
+    "storybook",
+    "jest",
+    "cypress",
+    "accessibility",
+    "design system",
+    "performance",
+    "web",
+    "vite",
+    "webpack",
+    "graphql",
+    "rest api"
+  ],
+  "exclude": [
+    "backend only",
+    "devops only",
+    "data engineer",
+    "machine learning",
+    "10+ years",
+    "15+ years"
+  ]
 }
