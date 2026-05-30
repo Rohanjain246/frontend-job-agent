@@ -12,15 +12,14 @@ sources = [
 ]
 
 for source_name, fn in sources:
+print(f"Checking {source_name}...")
 
-print(f"\nChecking {source_name}...\n")
 
 jobs_data = fn()
 
 print(f"Found {len(jobs_data)} jobs")
 
 for j in jobs_data:
-
     score = score_job(str(j))
 
     title = (
@@ -54,8 +53,8 @@ for j in jobs_data:
 os.makedirs("reports", exist_ok=True)
 
 if len(jobs) == 0:
-
 print("No matching jobs found")
+
 
 df = pd.DataFrame(
     columns=[
@@ -66,9 +65,10 @@ df = pd.DataFrame(
     ]
 )
 
-else:
 
+else:
 df = pd.DataFrame(jobs)
+
 
 if "score" in df.columns:
     df = df.sort_values(
@@ -76,15 +76,13 @@ if "score" in df.columns:
         ascending=False
     )
 
+
 df.to_csv(
 "reports/jobs.csv",
 index=False
 )
 
-print("\nTop Results:\n")
+print("\nTop Results:")
 print(df.head(20))
 
-print(
-f"\nSaved {len(df)} jobs "
-f"to reports/jobs.csv"
-)
+print(f"\nSaved {len(df)} jobs to reports/jobs.csv")
