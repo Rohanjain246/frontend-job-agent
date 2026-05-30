@@ -1,35 +1,23 @@
 source,score,title,company,url
-Greenhouse,100,"Frontend Engineer, Privy",stripe,https://stripe.com/jobs/search?gh_jid=7656562
-Greenhouse,80,"Product Manager, Sail Core",stripe,https://stripe.com/jobs/search?gh_jid=7913698
-Remotive,70,Tech Lead Full-Stack Rails Engineer,Mitre Media,https://remotive.com/remote-jobs/software-development/tech-lead-full-stack-rails-engineer-2069746
-Greenhouse,60,"Forward Deployed Engineer, Privy",stripe,https://stripe.com/jobs/search?gh_jid=7230452
-Greenhouse,60,"Fullstack Engineer, Privy",stripe,https://stripe.com/jobs/search?gh_jid=7091959
-Greenhouse,60,"Design Engineer, Presence",stripe,https://stripe.com/jobs/search?gh_jid=7144975
-Remotive,40,Staff Product Engineer (São Paulo),LawnStarter,https://remotive.com/remote-jobs/product/staff-product-engineer-sao-paulo-2090890
-Greenhouse,40,Network Solution Specialist,stripe,https://stripe.com/jobs/search?gh_jid=7589978
-Remotive,40,Staff Product Engineer (Campinas),LawnStarter,https://remotive.com/remote-jobs/product/staff-product-engineer-campinas-2090902
-Remotive,40,Staff Product Engineer (Florianópolis),LawnStarter,https://remotive.com/remote-jobs/product/staff-product-engineer-florianopolis-2090899
-Greenhouse,40,Network Solution Lead,stripe,https://stripe.com/jobs/search?gh_jid=7589897
-Remotive,40,Staff Product Engineer (Belo Horizonte),LawnStarter,https://remotive.com/remote-jobs/product/staff-product-engineer-belo-horizonte-2090900
-Greenhouse,40,"Staff Full Stack Engineer, Identity",stripe,https://stripe.com/jobs/search?gh_jid=7895467
-Greenhouse,40,"Principal Security Engineer, Privy",stripe,https://stripe.com/jobs/search?gh_jid=7947546
-Remotive,40,Staff Product Engineer (Porto Alegre),LawnStarter,https://remotive.com/remote-jobs/product/staff-product-engineer-porto-alegre-2090901
-Greenhouse,30,"Backend Engineer, Expansion",stripe,https://stripe.com/jobs/search?gh_jid=7775622
-Greenhouse,30,"Staff Software Engineer, Stripe Dashboard",stripe,https://stripe.com/jobs/search?gh_jid=7746721
-RemoteOK,20,Senior Backend Engineer,Gameplay Galaxy,https://remoteOK.com/remote-jobs/remote-senior-backend-engineer-gameplay-galaxy-1132512
+Remotive,50,Tech Lead Full-Stack Rails Engineer,Mitre Media,https://remotive.com/remote-jobs/software-development/tech-lead-full-stack-rails-engineer-2069746
+Greenhouse,40,"Design Engineer, Presence",stripe,https://stripe.com/jobs/search?gh_jid=7144975
+Remotive,20,Staff Product Engineer (Belo Horizonte),LawnStarter,https://remotive.com/remote-jobs/product/staff-product-engineer-belo-horizonte-2090900
+Remotive,20,Staff Product Engineer (Porto Alegre),LawnStarter,https://remotive.com/remote-jobs/product/staff-product-engineer-porto-alegre-2090901
 RemoteOK,20,Client Delivery Manager,Storyteller,https://remoteOK.com/remote-jobs/remote-client-delivery-manager-storyteller-1132435
-Greenhouse,20,"Infrastructure Engineer, Privy",stripe,https://stripe.com/jobs/search?gh_jid=7462961
-Greenhouse,20,"Software Engineering, New Grad",stripe,https://stripe.com/jobs/search?gh_jid=7176977
+Remotive,20,Staff Product Engineer (Florianópolis),LawnStarter,https://remotive.com/remote-jobs/product/staff-product-engineer-florianopolis-2090899
+Remotive,20,Staff Product Engineer (São Paulo),LawnStarter,https://remotive.com/remote-jobs/product/staff-product-engineer-sao-paulo-2090890
+Remotive,20,Staff Product Engineer (Campinas),LawnStarter,https://remotive.com/remote-jobs/product/staff-product-engineer-campinas-2090902
+Greenhouse,20,"Backend Engineer, Expansion",stripe,https://stripe.com/jobs/search?gh_jid=7775622
 Greenhouse,20,"Engineering Manager, Operator Tooling",stripe,https://stripe.com/jobs/search?gh_jid=7475396
-Greenhouse,20,Administrative Coordinator,stripe,https://stripe.com/jobs/search?gh_jid=7434713
-Greenhouse,20,Administrative Coordinator,stripe,https://stripe.com/jobs/search?gh_jid=7863507
-Greenhouse,20,"Software Engineer, Secrets Infrastructure",stripe,https://stripe.com/jobs/search?gh_jid=7396679
+Greenhouse,20,"Forward Deployed Engineer, Privy",stripe,https://stripe.com/jobs/search?gh_jid=7230452
+Greenhouse,20,"Frontend Engineer, Privy",stripe,https://stripe.com/jobs/search?gh_jid=7656562
+Greenhouse,20,"Fullstack Engineer, Privy",stripe,https://stripe.com/jobs/search?gh_jid=7091959
 Greenhouse,20,"Full Stack Engineer, Support Experience",stripe,https://stripe.com/jobs/search?gh_jid=7913464
+Greenhouse,20,Network Solution Lead,stripe,https://stripe.com/jobs/search?gh_jid=7589897
+Greenhouse,20,Network Solution Specialist,stripe,https://stripe.com/jobs/search?gh_jid=7589978
+Greenhouse,20,"Product Manager, Sail Core",stripe,https://stripe.com/jobs/search?gh_jid=7913698
+Greenhouse,20,"Software Engineer, Secrets Infrastructure",stripe,https://stripe.com/jobs/search?gh_jid=7396679
+Greenhouse,20,"Staff Full Stack Engineer, Identity",stripe,https://stripe.com/jobs/search?gh_jid=7895467
 Greenhouse,20,Staff Full Stack Engineer - Support Experience,stripe,https://stripe.com/jobs/search?gh_jid=7925073
-Greenhouse,20,"Technical Program Manager,  Extensibility Programs",stripe,https://stripe.com/jobs/search?gh_jid=7778643
-Greenhouse,20,"Technical Program Manager, Extensibility Programs",stripe,https://stripe.com/jobs/search?gh_jid=7749540
-Greenhouse,20,"Software Engineer, Intern",stripe,https://stripe.com/jobs/search?gh_jid=7532256
+Greenhouse,20,"Staff Software Engineer, Stripe Dashboard",stripe,https://stripe.com/jobs/search?gh_jid=7746721
 Greenhouse,20,Technical Solutions Engineer,stripe,https://stripe.com/jobs/search?gh_jid=7377101
-Greenhouse,10,"Backend Engineer, Payments and Risk",stripe,https://stripe.com/jobs/search?gh_jid=6163230
-Greenhouse,10,"Backend Engineer, Payments and Risk",stripe,https://stripe.com/jobs/search?gh_jid=7232592
-Greenhouse,10,"Backend/API Engineer, Money as a Service",stripe,https://stripe.com/jobs/search?gh_jid=6176758
