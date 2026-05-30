@@ -1,10 +1,10 @@
 name: Daily Job Agent
-on:
-workflow_dispatch:
+on: null
+workflow_dispatch: null
 schedule:
   - cron: 30 2 * * *
-jobs:
-run:
+jobs: null
+run: null
 runs-on: ubuntu-latest
 steps:
   - name: Checkout Code
