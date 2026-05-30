@@ -3,6 +3,7 @@ print("NEW VERSION LOADED")
 from sources.remoteok import fetch_remoteok
 from sources.remotive import fetch_remotive
 from scorer import score_job
+from email_report import send_email_report
 import pandas as pd
 import os
 
@@ -53,6 +54,16 @@ if not df.empty and "score" in df.columns:
     df = df.sort_values("score", ascending=False)
 
 df.to_csv("reports/jobs.csv", index=False)
+report_lines = []
+
+for _, row in df.head(20).iterrows():
+    report_lines.append(
+        f"{row['title']} | {row['company']} | Score {row['score']}"
+    )
+
+report_text = "\n".join(report_lines)
+
+send_email_report(report_text)
 print("\nTop Results:")
 print(df.head(20))
 print(f"\nSaved {len(df)} jobs to reports/jobs.csv")
