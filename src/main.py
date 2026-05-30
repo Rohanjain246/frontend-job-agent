@@ -12,7 +12,7 @@ sources = [
 ]
 
 for source_name, fn in sources:
-    print(f"Checking {source_name}...")
+    print(f"\nChecking {source_name}...\n")
 
     jobs_data = fn()
     print(f"Found {len(jobs_data)} jobs")
@@ -38,13 +38,13 @@ for source_name, fn in sources:
 
 os.makedirs("reports", exist_ok=True)
 
-if len(jobs) == 0:
+if not jobs:
     print("No matching jobs found")
     df = pd.DataFrame(columns=["source", "score", "title", "company"])
 else:
     df = pd.DataFrame(jobs)
 
-if "score" in df.columns and not df.empty:
+if not df.empty and "score" in df.columns:
     df = df.sort_values("score", ascending=False)
 
 df.to_csv("reports/jobs.csv", index=False)
