@@ -1,34 +1,42 @@
 {
-  "primary": [
-    "react",
-    "javascript",
-    "frontend",
-    "fullstack",
-    "developer",
-    "hiring"
-  ],
-  "secondary": [
-    "html",
-    "css",
-    "tailwind",
-    "redux",
-    "storybook",
-    "jest",
-    "cypress",
-    "accessibility",
-    "design system",
-    "performance",
-    "web",
-    "vite",
-    "webpack",
-    "rest api"
-  ],
-  "exclude": [
-    "backend only",
-    "devops only",
-    "data engineer",
-    "machine learning",
-    "10+ years",
-    "15+ years"
-  ]
+"primary": [
+"react",
+"typescript",
+"javascript",
+"next.js",
+"frontend engineer",
+"frontend developer",
+"react developer",
+"ui engineer"
+],
+"secondary": [
+"html",
+"css",
+"tailwind",
+"redux",
+"storybook",
+"jest",
+"cypress",
+"accessibility",
+"design system",
+"react query",
+"vite",
+"webpack"
+],
+"exclude": [
+"paralegal",
+"recruiter",
+"office assistant",
+"accountant",
+"nurse",
+"sales",
+"marketing",
+"customer support",
+"data entry",
+"backend only",
+"machine learning",
+"data engineer",
+"devops",
+"qa tester"
+]
 }
