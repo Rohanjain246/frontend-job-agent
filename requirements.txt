@@ -1,0 +1,15 @@
+# Core HTTP & parsing
+requests==2.31.0
+beautifulsoup4==4.12.3
+lxml==5.2.1
+
+# Data handling
+pandas==2.2.2
+
+# Environment variables
+python-dotenv==1.0.1
+
+# Google Sheets integration (needed for GOOGLE_SHEET_ID in .env)
+gspread==6.1.2
+google-auth==2.29.0
+google-auth-httplib2==0.2.0
