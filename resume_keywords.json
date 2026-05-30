@@ -1,36 +1,30 @@
 {
-  "primary": [
+  "core_tech": [
     "react",
     "typescript",
-    "javascript",
-    "frontend",
-    "frontend engineer",
-    "frontend developer",
-    "ui engineer",
-    "next.js",
-    "react developer",
-    "react engineer",
-    "nextjs"
+    "javascript"
   ],
-  "secondary": [
-    "html",
-    "css",
+  "role_terms": [
+    "frontend",
+    "frontend developer",
+    "ui developer",
+    "react developer",
+    "front end",
+    "front-end"
+  ],
+  "skills": [
     "tailwind",
     "redux",
-    "storybook",
-    "jest",
-    "cypress",
-    "accessibility",
-    "design system",
-    "performance",
-    "web",
     "vite",
     "webpack",
-    "graphql",
+    "performance",
     "rest api",
-    "node",
     "vercel",
-    "api"
+    "zustand",
+    "tanstack",
+    "react query",
+    "styled components",
+    "css modules"
   ],
   "watchlist": [
     "stripe",
@@ -44,7 +38,12 @@
     "groww",
     "zepto",
     "swiggy",
-    "meesho"
+    "meesho",
+    "cred",
+    "zerodha",
+    "notion",
+    "linear",
+    "figma"
   ],
   "exclude": [
     "backend only",
@@ -52,6 +51,8 @@
     "data engineer",
     "machine learning",
     "data scientist",
+    "5+ years",
+    "7+ years",
     "10+ years",
     "12+ years",
     "15+ years"
