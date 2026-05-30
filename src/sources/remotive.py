@@ -1,18 +1,21 @@
 import requests
 
-def fetch_remotive():
-try:
-response = requests.get(
-"https://remotive.com/api/remote-jobs",
-timeout=20
-)
+def fetch_remoteok():
+    try:
+        response = requests.get(
+            "https://remoteok.com/api",
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            },
+            timeout=20
+        )
+        data = response.json()
 
+        if isinstance(data, list):
+            return data[1:]
 
-    data = response.json()
+        return []
 
-    return data.get("jobs", [])
-
-except Exception as e:
-    print("Remotive Error:", e)
-    return []
-
+    except Exception as e:
+        print("RemoteOK Error:", e)
+        return []
