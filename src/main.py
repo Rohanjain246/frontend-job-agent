@@ -7,80 +7,47 @@ import os
 jobs = []
 
 sources = [
-("RemoteOK", fetch_remoteok),
-("Remotive", fetch_remotive)
+    ("RemoteOK", fetch_remoteok),
+    ("Remotive", fetch_remotive),
 ]
 
 for source_name, fn in sources:
-print(f"Checking {source_name}...")
+    print(f"Checking {source_name}...")
 
+    jobs_data = fn()
+    print(f"Found {len(jobs_data)} jobs")
 
-jobs_data = fn()
+    for j in jobs_data:
+        score = score_job(str(j))
 
-print(f"Found {len(jobs_data)} jobs")
+        title = j.get("position") or j.get("title") or "Unknown"
+        company = j.get("company") or j.get("company_name") or "Unknown"
 
-for j in jobs_data:
-    score = score_job(str(j))
+        if score > 0:
+            print(f"Score={score} | {title} | {company}")
 
-    title = (
-        j.get("position")
-        or j.get("title")
-        or "Unknown"
-    )
-
-    company = (
-        j.get("company")
-        or j.get("company_name")
-        or "Unknown"
-    )
-
-    if score > 0:
-        print(
-            f"Score={score} | "
-            f"{title} | "
-            f"{company}"
-        )
-
-    if score >= 25:
-        jobs.append({
-            "source": source_name,
-            "score": score,
-            "title": title,
-            "company": company
-        })
-
+        if score >= 25:
+            jobs.append(
+                {
+                    "source": source_name,
+                    "score": score,
+                    "title": title,
+                    "company": company,
+                }
+            )
 
 os.makedirs("reports", exist_ok=True)
 
 if len(jobs) == 0:
-print("No matching jobs found")
-
-
-df = pd.DataFrame(
-    columns=[
-        "source",
-        "score",
-        "title",
-        "company"
-    ]
-)
-
-
+    print("No matching jobs found")
+    df = pd.DataFrame(columns=["source", "score", "title", "company"])
 else:
-df = pd.DataFrame(jobs)
+    df = pd.DataFrame(jobs)
 
+if "score" in df.columns and not df.empty:
+    df = df.sort_values("score", ascending=False)
 
-if "score" in df.columns:
-    df = df.sort_values(
-        "score",
-        ascending=False
-    )
-
-
-df.to_csv(
-"reports/jobs.csv",
-index=False
-)
+df.to_csv("reports/jobs.csv", index=False)
 
 print("\nTop Results:")
 print(df.head(20))
