@@ -4,6 +4,7 @@ from sources.remoteok import fetch_remoteok
 from sources.remotive import fetch_remotive
 from scorer import score_job
 from email_report import send_email_report
+from sheets_writer import update_sheet
 import pandas as pd
 import os
 
@@ -62,7 +63,7 @@ for _, row in df.head(20).iterrows():
     )
 
 report_text = "\n".join(report_lines)
-
+update_sheet(df)
 send_email_report(report_text)
 print("\nTop Results:")
 print(df.head(20))
