@@ -1,30 +1,59 @@
 {
-"primary": [
-"react",
-"react developer",
-"ui developer"
-],
-"secondary": [
-"html",
-"css",
-"tailwind",
-"redux"
-],
-"exclude": [
-"paralegal",
-"recruiter",
-"office assistant",
-"accountant",
-"nurse",
-"sales",
-"marketing",
-"customer support",
-"data entry",
-"backend only",
-"machine learning",
-"data engineer",
-"devops",
-"qa tester",
-"coordinator"
-]
+  "primary": [
+    "react",
+    "typescript",
+    "javascript",
+    "frontend",
+    "frontend engineer",
+    "frontend developer",
+    "ui engineer",
+    "next.js",
+    "react developer",
+    "react engineer",
+    "nextjs"
+  ],
+  "secondary": [
+    "html",
+    "css",
+    "tailwind",
+    "redux",
+    "storybook",
+    "jest",
+    "cypress",
+    "accessibility",
+    "design system",
+    "performance",
+    "web",
+    "vite",
+    "webpack",
+    "graphql",
+    "rest api",
+    "node",
+    "vercel",
+    "api"
+  ],
+  "watchlist": [
+    "stripe",
+    "vercel",
+    "atlassian",
+    "razorpay",
+    "browserstack",
+    "freshworks",
+    "postman",
+    "hasura",
+    "groww",
+    "zepto",
+    "swiggy",
+    "meesho"
+  ],
+  "exclude": [
+    "backend only",
+    "devops only",
+    "data engineer",
+    "machine learning",
+    "data scientist",
+    "10+ years",
+    "12+ years",
+    "15+ years"
+  ]
 }
