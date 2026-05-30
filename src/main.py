@@ -1,3 +1,4 @@
+print("NEW VERSION LOADED")
 from sources.remoteok import fetch_remoteok
 from sources.remotive import fetch_remotive
 from scorer import score_job
