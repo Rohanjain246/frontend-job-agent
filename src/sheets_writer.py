@@ -32,7 +32,8 @@ def update_sheet(df):
                 str(row.get("company", "")),
                 str(row.get("title", "")),
                 str(row.get("score", "")),
-                str(row.get("source", ""))
+                str(row.get("source", "")),
+                str(row.get("url", "")),
             ])
 
         # Append rows to the sheet if data exists
