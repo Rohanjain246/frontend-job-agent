@@ -2,28 +2,89 @@ from sources.remoteok import fetch_remoteok
 from sources.remotive import fetch_remotive
 from scorer import score_job
 import pandas as pd
+import os
 
-jobs=[]
+jobs = []
 
-for fn in [fetch_remoteok, fetch_remotive]:
-    for j in fn():
-        s = score_job(str(j))
-        if s >= 70:
-            jobs.append({
-                'score': s,
-                'title': j.get('position') or j.get('title'),
-                'company': j.get('company')
-            })
+sources = [
+("RemoteOK", fetch_remoteok),
+("Remotive", fetch_remotive)
+]
+
+for source_name, fn in sources:
+
+print(f"\nChecking {source_name}...\n")
+
+jobs_data = fn()
+
+print(f"Found {len(jobs_data)} jobs")
+
+for j in jobs_data:
+
+    score = score_job(str(j))
+
+    title = (
+        j.get("position")
+        or j.get("title")
+        or "Unknown"
+    )
+
+    company = (
+        j.get("company")
+        or j.get("company_name")
+        or "Unknown"
+    )
+
+    if score > 0:
+        print(
+            f"Score={score} | "
+            f"{title} | "
+            f"{company}"
+        )
+
+    if score >= 25:
+        jobs.append({
+            "source": source_name,
+            "score": score,
+            "title": title,
+            "company": company
+        })
+
+
+os.makedirs("reports", exist_ok=True)
 
 if len(jobs) == 0:
-    print("No jobs found")
-    df = pd.DataFrame(columns=["score","title","company"])
+
+print("No matching jobs found")
+
+df = pd.DataFrame(
+    columns=[
+        "source",
+        "score",
+        "title",
+        "company"
+    ]
+)
+
 else:
-    df = pd.DataFrame(jobs)
 
-    if "score" in df.columns:
-        df = df.sort_values("score", ascending=False)
+df = pd.DataFrame(jobs)
 
-df.to_csv("reports/jobs.csv", index=False)
+if "score" in df.columns:
+    df = df.sort_values(
+        "score",
+        ascending=False
+    )
 
-print(df.head())
+df.to_csv(
+"reports/jobs.csv",
+index=False
+)
+
+print("\nTop Results:\n")
+print(df.head(20))
+
+print(
+f"\nSaved {len(df)} jobs "
+f"to reports/jobs.csv"
+)
