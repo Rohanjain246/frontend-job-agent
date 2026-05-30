@@ -14,7 +14,7 @@ timeout=20
     data = response.json()
 
     if isinstance(data, list):
-        return data[1:]  # Skip metadata row
+        return data[1:]
 
     return []
 
