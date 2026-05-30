@@ -7,6 +7,7 @@ response = requests.get(
 timeout=20
 )
 
+
     data = response.json()
 
     return data.get("jobs", [])
@@ -14,3 +15,4 @@ timeout=20
 except Exception as e:
     print("Remotive Error:", e)
     return []
+
