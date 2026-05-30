@@ -1,18 +1,25 @@
 {
-  "primary": [
-    "react",
-    "typescript",
-    "next.js",
-    "frontend engineer",
-    "frontend developer",
-    "ui engineer"
-  ],
-  "secondary": [
-    "storybook",
-    "tailwind",
-    "jest",
-    "cypress",
-    "accessibility",
-    "design system"
-  ]
+"primary": [
+"react",
+"typescript",
+"javascript",
+"frontend",
+"frontend engineer",
+"frontend developer",
+"ui engineer",
+"next.js"
+],
+"secondary": [
+"html",
+"css",
+"tailwind",
+"redux",
+"storybook",
+"jest",
+"cypress",
+"accessibility",
+"design system",
+"performance",
+"web"
+]
 }
