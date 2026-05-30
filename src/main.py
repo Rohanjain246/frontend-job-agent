@@ -2,6 +2,7 @@ print("NEW VERSION LOADED")
 
 from sources.remoteok import fetch_remoteok
 from sources.remotive import fetch_remotive
+from sources.greenhouse import fetch_greenhouse_jobs
 from scorer import score_job
 from email_report import send_email_report
 from sheets_writer import update_sheet
@@ -13,6 +14,7 @@ jobs = []
 sources = [
     ("RemoteOK", fetch_remoteok),
     ("Remotive", fetch_remotive),
+    ("Greenhouse",fetch_greenhouse_jobs),
 ]
 
 for source_name, fn in sources:
