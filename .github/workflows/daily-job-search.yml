@@ -1,14 +1,11 @@
-name:Daily job Agent
-
+---
+name: Daily Job Agent
 on:
-workflow_dispatch:
-
+  workflow_dispatch: null
 jobs:
-run:
-run-on:ubuntu-latest
-
-steps:
-  -uses:actions/checkout@v4
-
-  -name:Hello
-  run:echo "workflow works!"
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hello
+        run: echo "Workflow works!"
