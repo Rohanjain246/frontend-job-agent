@@ -2,13 +2,13 @@
 "primary": [
 "react",
 "react developer",
-"ui developer",
+"ui developer"
 ],
 "secondary": [
 "html",
 "css",
 "tailwind",
-"redux",
+"redux"
 ],
 "exclude": [
 "paralegal",
@@ -25,6 +25,6 @@
 "data engineer",
 "devops",
 "qa tester",
-"coordinator",
+"coordinator"
 ]
 }
