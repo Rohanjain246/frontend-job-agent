@@ -1,0 +1,18 @@
+{
+  "primary": [
+    "react",
+    "typescript",
+    "next.js",
+    "frontend engineer",
+    "frontend developer",
+    "ui engineer"
+  ],
+  "secondary": [
+    "storybook",
+    "tailwind",
+    "jest",
+    "cypress",
+    "accessibility",
+    "design system"
+  ]
+}
