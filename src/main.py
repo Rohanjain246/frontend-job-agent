@@ -1,75 +1,70 @@
 print("NEW VERSION LOADED")
 
-from sources.remoteok import fetch_remoteok
-from sources.remotive import fetch_remotive
-from sources.greenhouse import fetch_greenhouse_jobs
+from sources.remoteok        import fetch_remoteok
+from sources.remotive        import fetch_remotive
+from sources.Jsearch         import fetch_jsearch
+from sources.Adzuna          import fetch_adzuna
+from sources.linkedin_public import fetch_linkedin
 from scorer import score_job
-from email_report import send_email_report
-from sheets_writer import update_sheet
+
 import pandas as pd
 import os
 
 jobs = []
 
 sources = [
-    ("RemoteOK", fetch_remoteok),
-    ("Remotive", fetch_remotive),
-    ("Greenhouse",fetch_greenhouse_jobs),
+    ("RemoteOK",  fetch_remoteok),
+    ("Remotive",  fetch_remotive),
+    ("JSearch",   fetch_jsearch),      # LinkedIn + Indeed + Glassdoor + Naukri
+    ("Adzuna",    fetch_adzuna),       # India-focused official API
+    ("LinkedIn",  fetch_linkedin),     # Public search, no login
 ]
 
+seen_titles = set()   # deduplicate across all sources
+
 for source_name, fn in sources:
-    print(f"\nChecking {source_name}...\n")
+    print(f"\nChecking {source_name}...")
     jobs_data = fn()
-    print(f"Found {len(jobs_data)} jobs")
+    print(f"Found {len(jobs_data)} jobs from {source_name}")
 
     for j in jobs_data:
-        score = score_job(j)  # ✅ FIXED: was score_job(str(j))
-        #    str(j) passes a raw string like
-        #    "{'title': ...}" which breaks
-        #    scorer's .get() calls on the dict
-        title = j.get("position") or j.get("title") or "Unknown"
+        score = score_job(j)           # pass dict directly — scorer handles it
+
+        title   = j.get("title")   or j.get("position")     or "Unknown"
         company = j.get("company") or j.get("company_name") or "Unknown"
+        url     = j.get("url")     or j.get("job_url")      or ""
+
+        # deduplicate by title+company across all sources
+        dedup_key = f"{title.lower()}|{company.lower()}"
+        if dedup_key in seen_titles:
+            continue
+        seen_titles.add(dedup_key)
 
         if score > 0:
-            print(f"Score={score} | {title} | {company}")
+            print(f"  Score={score:>3} | {title} | {company}")
 
-        if score >= 5:  # ✅ FIXED: was 25 — unreachable with
-            #    typical keyword hits (+3 primary,
-            #    +1 secondary). Lowered to 5 so
-            #    at least 1 strong primary match
-            #    qualifies. Adjust to taste.
-            jobs.append(
-                {
-                    "source": source_name,
-                    "score": score,
-                    "title": title,
-                    "company": company,
-                    "url": (
-                        j.get("url") or j.get("job_url") or j.get("apply_url") or ""
-                    ),
-                }
-            )
+        if score >= 5:                 # >=5 = at least 1 strong primary keyword
+            jobs.append({
+                "source":  source_name,
+                "score":   score,
+                "title":   title,
+                "company": company,
+                "url":     url,
+            })
 
 os.makedirs("reports", exist_ok=True)
 
 if not jobs:
-    print("\nNo matching jobs found")
-    df = pd.DataFrame(columns=["source", "score", "title", "company"])
+    print("\nNo matching jobs found above threshold")
+    df = pd.DataFrame(columns=["source", "score", "title", "company", "url"])
 else:
     df = pd.DataFrame(jobs)
 
 if not df.empty and "score" in df.columns:
-    df = df.sort_values("score", ascending=False)
+    df = df.sort_values("score", ascending=False).reset_index(drop=True)
 
 df.to_csv("reports/jobs.csv", index=False)
-report_lines = []
 
-for _, row in df.head(20).iterrows():
-    report_lines.append(f"{row['title']} | {row['company']} | Score {row['score']}")
-
-report_text = "\n".join(report_lines)
-update_sheet(df)
-send_email_report(report_text)
-print("\nTop Results:")
-print(df.head(20))
+print("\n-- Top Results --")
+print(df[["score", "title", "company", "source"]].head(20).to_string(index=False))
 print(f"\nSaved {len(df)} jobs to reports/jobs.csv")
