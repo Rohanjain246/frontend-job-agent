@@ -1,9 +1,9 @@
-source,score,title,company
-Remotive,70,Tech Lead Full-Stack Rails Engineer,Mitre Media
-Remotive,40,Staff Product Engineer (Belo Horizonte),LawnStarter
-Remotive,40,Staff Product Engineer (Porto Alegre),LawnStarter
-Remotive,40,Staff Product Engineer (Florianópolis),LawnStarter
-Remotive,40,Staff Product Engineer (Campinas),LawnStarter
-Remotive,40,Staff Product Engineer (São Paulo),LawnStarter
-RemoteOK,20,Senior Backend Engineer,Gameplay Galaxy
-RemoteOK,20,Client Delivery Manager,Storyteller
+source,score,title,company,url
+Remotive,70,Tech Lead Full-Stack Rails Engineer,Mitre Media,https://remotive.com/remote-jobs/software-development/tech-lead-full-stack-rails-engineer-2069746
+Remotive,40,Staff Product Engineer (Belo Horizonte),LawnStarter,https://remotive.com/remote-jobs/product/staff-product-engineer-belo-horizonte-2090900
+Remotive,40,Staff Product Engineer (Porto Alegre),LawnStarter,https://remotive.com/remote-jobs/product/staff-product-engineer-porto-alegre-2090901
+Remotive,40,Staff Product Engineer (Florianópolis),LawnStarter,https://remotive.com/remote-jobs/product/staff-product-engineer-florianopolis-2090899
+Remotive,40,Staff Product Engineer (Campinas),LawnStarter,https://remotive.com/remote-jobs/product/staff-product-engineer-campinas-2090902
+Remotive,40,Staff Product Engineer (São Paulo),LawnStarter,https://remotive.com/remote-jobs/product/staff-product-engineer-sao-paulo-2090890
+RemoteOK,20,Senior Backend Engineer,Gameplay Galaxy,https://remoteOK.com/remote-jobs/remote-senior-backend-engineer-gameplay-galaxy-1132512
+RemoteOK,20,Client Delivery Manager,Storyteller,https://remoteOK.com/remote-jobs/remote-client-delivery-manager-storyteller-1132435
