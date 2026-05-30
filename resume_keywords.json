@@ -1,27 +1,14 @@
 {
 "primary": [
 "react",
-"typescript",
-"javascript",
-"next.js",
-"frontend engineer",
-"frontend developer",
 "react developer",
-"ui engineer"
+"ui developer",
 ],
 "secondary": [
 "html",
 "css",
 "tailwind",
 "redux",
-"storybook",
-"jest",
-"cypress",
-"accessibility",
-"design system",
-"react query",
-"vite",
-"webpack"
 ],
 "exclude": [
 "paralegal",
@@ -37,6 +24,7 @@
 "machine learning",
 "data engineer",
 "devops",
-"qa tester"
+"qa tester",
+"coordinator",
 ]
 }
