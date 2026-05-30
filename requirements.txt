@@ -2,7 +2,3 @@ requests
 pandas
 beautifulsoup4
 lxml
-gspread
-google-auth
-jinja2
-python-dotenv
