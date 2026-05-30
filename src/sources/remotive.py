@@ -1,5 +1,16 @@
-
 import requests
+
 def fetch_remotive():
-    try:return requests.get('https://remotive.com/api/remote-jobs',timeout=20).json().get('jobs',[])
-    except:return []
+try:
+response = requests.get(
+"https://remotive.com/api/remote-jobs",
+timeout=20
+)
+
+    data = response.json()
+
+    return data.get("jobs", [])
+
+except Exception as e:
+    print("Remotive Error:", e)
+    return []
